@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript + DOM</title>
+</head>
+<style>
+
+	.pogi {
+		pogi {
+
+		}
+	}
+
+
+</style>
+
+<body>
+	<h1>To-Do List</h1>
+	<p id="first">Get it done today</p>
+	<input id="userinput" type="text" placeholder="enter items">
+	<button id="enter">Enter</button>
+	<ul>
+		<li class="bold red" random="23">Work</li>
+		<li>Laugh</li>
+		<li>Clean Room</li>
+		<li>Poo POO</li>
+		<li>Dance</li>
+		<li>Exercise</li>
+	</ul>
+
+	<script> 
+
+		var button = document.getElementById("enter");
+		var input = document.getElementById("userinput")
+		var ul = document.querySelector("ul")
+		button.addEventListener("click", function(){
+			if(input.value.trim().length != 0 )
+			var li =document.createElement("li");
+			li.innerHTML = input.value;	
+			ul.appendChild(li);
+			input.value = " ";
+				
+		
+		})
+
+
+
+	</script>
+</body>
+</html>
+
+
+
